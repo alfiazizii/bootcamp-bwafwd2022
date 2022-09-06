@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\FrontSite\LandingController;
-use App\Http\Controllers\FrontSite\Appointment;
+use App\Http\Controllers\FrontSite\AppointmentController;
 use App\Http\Controllers\FrontSite\PaymentController;
 
 /*
@@ -22,7 +22,7 @@ Route::resource('/', LandingController::class);
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function() {
 
     // appointment page
-    Route::resource('appointment', ApppointmentController::class);
+    Route::resource('appointment', AppointmentController::class);
 
     // payment page
     Route::resource('payment', PaymentController::class);
